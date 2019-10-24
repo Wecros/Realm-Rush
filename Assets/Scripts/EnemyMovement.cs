@@ -12,7 +12,7 @@ public class EnemyMovement : MonoBehaviour {
 		StartCoroutine(FollowPath());
 		print("Hey I'm back at Start");
 	}
- 
+
 	IEnumerator FollowPath()
 	{
 		print("Starting patrol...");
