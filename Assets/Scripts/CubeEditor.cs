@@ -1,25 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+	Vector3 gridPos;
 
 [ExecuteInEditMode]
 [SelectionBase]
 public class CubeEditor : MonoBehaviour {
-	[SerializeField] [Range(1, 20)] int gridSize = 10;
-
+	const int gridSize = 10;
 	TextMesh textMesh;
 
 	void Update()
-	{
-		Vector3 snapPos;
-		snapPos.x = Mathf.RoundToInt(transform.position.x / gridSize) * gridSize;
-		snapPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
-		transform.position = new Vector3(snapPos.x, 0f, snapPos.z);
+    {
+        gridPos.x = Mathf.RoundToInt(transform.position.x / gridSize) * gridSize;
+        gridPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
+        transform.position = new Vector3(gridPos.x, 0f, gridPos.z);
 
-		textMesh = GetComponentInChildren<TextMesh>();
-		string labelText = snapPos.x / gridSize + "," + snapPos.z / gridSize;
-		textMesh.text = labelText;
-		gameObject.name = "Block: " + labelText;
-		//gameObject.name = labelText;
-	}
+        UpdateLabel(gridPos);
+    }
+
+    private void UpdateLabel(Vector3 gridPos)
+    {
+        textMesh = GetComponentInChildren<TextMesh>();
+        string labelText = gridPos.x / gridSize + "," + gridPos.z / gridSize;
+        textMesh.text = labelText;
+        gameObject.name = "Waypoint: " + labelText;
+        //gameObject.name = labelText;
+    }
 }
