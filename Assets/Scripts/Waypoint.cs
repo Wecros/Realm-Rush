@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Waypoint : MonoBehaviour {
-
+public class Waypoint : MonoBehaviour 
+{
+    public bool isExplored = false; // ok as in a data class
 	const int gridSize = 10;
-
 
 	// Use this for initialization
 	void Start () {

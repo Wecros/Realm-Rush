@@ -30,10 +30,13 @@ public class Pathfinder : MonoBehaviour
     private void Pathfind() 
     {
         queue.Enqueue(startWaypoint);
+
         while (queue.Count > 0) {
             var searchCenter = queue.Dequeue();
+            searchCenter.isExplored = true;
             print("Searching from: " + searchCenter);
             HaltIfEndFound(searchCenter);
+            ExploreNeighbours(searchCenter);
         }
         
         print("Finished pathfinding?");
@@ -47,17 +50,32 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
-    private void ExploreNeighbours() 
+    private void ExploreNeighbours(Waypoint from) 
     {
+        if (!isRunning) { return; }
+
         foreach (Vector2Int direction in directions)
         {
-            Vector2Int explorationCoords = startWaypoint.GetGridPos() + direction;
-            print("Exploring " + explorationCoords);
+            Vector2Int neighbourCoords = from.GetGridPos() + direction;
+            print("Exploring " + neighbourCoords);
 
-            try {
-                grid[explorationCoords].SetTopColor(Color.blue);                
+            try
+            {
+                QueueNewNeighbours(neighbourCoords);
             }
             catch { }
+        }
+    }
+
+    private void QueueNewNeighbours(Vector2Int neighbourCoords)
+    {
+        Waypoint neighbour = grid[neighbourCoords];
+        if (neighbour.isExplored) {
+            // do nothing
+        } else {
+            neighbour.SetTopColor(Color.blue); // todo remove later
+            queue.Enqueue(neighbour);
+            print("Queueing: " + neighbour);
         }
     }
 
