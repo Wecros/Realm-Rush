@@ -10,6 +10,7 @@ public class Pathfinder : MonoBehaviour
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     Queue<Waypoint> queue = new Queue<Waypoint>();
     bool isRunning = true;
+    Waypoint searchCenter; // the current searchCenter
 
     Vector2Int[] directions = {
         Vector2Int.up,
@@ -24,39 +25,38 @@ public class Pathfinder : MonoBehaviour
         LoadBlocks();
         ColorStartAndEnd();
         Pathfind();
-        // ExploreNeighbours();
     }
 
     private void Pathfind() 
     {
         queue.Enqueue(startWaypoint);
 
-        while (queue.Count > 0) {
-            var searchCenter = queue.Dequeue();
+        while (queue.Count > 0 && isRunning) {
+            searchCenter = queue.Dequeue();
             searchCenter.isExplored = true;
             print("Searching from: " + searchCenter);
-            HaltIfEndFound(searchCenter);
-            ExploreNeighbours(searchCenter);
+            HaltIfEndFound();
+            ExploreNeighbours();
         }
         
         print("Finished pathfinding?");
     }
 
-    private void HaltIfEndFound(Waypoint searchCenter)
+    private void HaltIfEndFound()
     {
-        if (startWaypoint == endWaypoint) {
+        if (searchCenter == endWaypoint) {
             print("Searching from end node, therefore stopping");
             isRunning = false;
         }
     }
 
-    private void ExploreNeighbours(Waypoint from) 
+    private void ExploreNeighbours() 
     {
         if (!isRunning) { return; }
 
         foreach (Vector2Int direction in directions)
         {
-            Vector2Int neighbourCoords = from.GetGridPos() + direction;
+            Vector2Int neighbourCoords = searchCenter.GetGridPos() + direction;
             print("Exploring " + neighbourCoords);
 
             try
@@ -70,11 +70,12 @@ public class Pathfinder : MonoBehaviour
     private void QueueNewNeighbours(Vector2Int neighbourCoords)
     {
         Waypoint neighbour = grid[neighbourCoords];
-        if (neighbour.isExplored) {
+        if (neighbour.isExplored || queue.Contains(neighbour)) {
             // do nothing
         } else {
-            neighbour.SetTopColor(Color.blue); // todo remove later
+            // neighbour.SetTopColor(Color.blue); // todo remove later
             queue.Enqueue(neighbour);
+            neighbour.exploredFrom = searchCenter;
             print("Queueing: " + neighbour);
         }
     }
