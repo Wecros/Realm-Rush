@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +135,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 4,1'
+      value: 4,1
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -282,7 +282,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 5,1'
+      value: 5,1
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -332,7 +332,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 0,1'
+      value: 0,1
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -394,7 +394,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 1,1'
+      value: 1,1
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -551,7 +551,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 4,0'
+      value: 4,0
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -598,6 +598,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1157987663}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1003191978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114482751021556736, guid: fee9f2b68dacab847b3bb39dc0c8f540,
+    type: 3}
+  m_PrefabInstance: {fileID: 1291291419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86978ca7f970406dbce842d0841a7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1106449133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -607,7 +619,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 3,0'
+      value: 3,0
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -663,7 +675,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 2,1'
+      value: 2,1
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -719,7 +731,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 3,1'
+      value: 3,1
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -835,7 +847,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 4,2'
+      value: 4,2
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -908,7 +920,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 2,0'
+      value: 2,0
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -958,7 +970,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 0,0'
+      value: 0,0
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1055,7 +1067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startWaypoint: {fileID: 569247429}
-  endWaypoint: {fileID: 569247429}
+  endWaypoint: {fileID: 1003191978}
 --- !u!1001 &1454278807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1065,7 +1077,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 4,3'
+      value: 4,3
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1132,7 +1144,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 1,0'
+      value: 1,0
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1182,7 +1194,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 5,2'
+      value: 5,2
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1244,7 +1256,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 3,2'
+      value: 3,2
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1299,7 +1311,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 2,2'
+      value: 2,2
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1355,7 +1367,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1380885575617852, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_Name
-      value: 'Waypoint: 3,3'
+      value: 3,3
       objectReference: {fileID: 0}
     - target: {fileID: 4492316124620762, guid: fee9f2b68dacab847b3bb39dc0c8f540, type: 3}
       propertyPath: m_LocalPosition.x
