@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour 
 {
-	[SerializeField] Color exploreColor;
-
 	// public ok here as in a data class
     public bool isExplored = false; 
 	public Waypoint exploredFrom;
@@ -14,13 +12,6 @@ public class Waypoint : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		
-	}
-
-	// consider setting own color in Update();
-	private void Update() {
-		if (isExplored) {
-			gameObject.SetTopColor(exploreColor);
-		}
 	}
 
 	public int GetGridSize() {

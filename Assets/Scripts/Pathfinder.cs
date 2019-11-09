@@ -11,6 +11,7 @@ public class Pathfinder : MonoBehaviour
     Queue<Waypoint> queue = new Queue<Waypoint>();
     bool isRunning = true;
     Waypoint searchCenter; // the current searchCenter
+    List<Waypoint> path = new List<Waypoint>();
 
     Vector2Int[] directions = {
         Vector2Int.up,
@@ -19,15 +20,29 @@ public class Pathfinder : MonoBehaviour
         Vector2Int.left,        
     };
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    public List<Waypoint> GetPath() {
         LoadBlocks();
         ColorStartAndEnd();
-        Pathfind();
+        BreadthFirstSearch();
+        CreatePath();
+        return path;
     }
 
-    private void Pathfind() 
+    private void CreatePath() {
+        path.Add(endWaypoint);
+
+        Waypoint previous = endWaypoint.exploredFrom;
+        while (previous != startWaypoint) {
+            // add intermediate waypoints
+            path.Add(previous);
+            previous = previous.exploredFrom;
+        }
+
+        path.Add(startWaypoint);
+        path.Reverse();
+    }
+
+    private void BreadthFirstSearch() 
     {
         queue.Enqueue(startWaypoint);
 
@@ -55,12 +70,9 @@ public class Pathfinder : MonoBehaviour
         foreach (Vector2Int direction in directions)
         {
             Vector2Int neighbourCoords = searchCenter.GetGridPos() + direction;
-            print("Exploring " + neighbourCoords);
-
-            try {
+            if (grid.ContainsKey(neighbourCoords)) {
                 QueueNewNeighbours(neighbourCoords);
             }
-            catch { }
         }
     }
 
@@ -70,7 +82,6 @@ public class Pathfinder : MonoBehaviour
         if (neighbour.isExplored || queue.Contains(neighbour)) {
             // do nothing
         } else {
-            // neighbour.SetTopColor(Color.blue); // todo remove later
             queue.Enqueue(neighbour);
             neighbour.exploredFrom = searchCenter;
         }
@@ -78,6 +89,7 @@ public class Pathfinder : MonoBehaviour
 
     private void ColorStartAndEnd() 
     {
+        // TODO: consider moving else
         startWaypoint.SetTopColor(Color.green);
         endWaypoint.SetTopColor(Color.red);
     }
@@ -93,7 +105,6 @@ public class Pathfinder : MonoBehaviour
                 grid.Add(gridPos, waypoint);
             }
         }
-        print("Loaded: " + grid.Count + " blocks");
     }
 
     // Update is called once per frame
