@@ -52,8 +52,6 @@ public class Pathfinder : MonoBehaviour
             HaltIfEndFound();
             ExploreNeighbours();
         }
-        
-        print("Finished pathfinding?");
     }
 
     private void HaltIfEndFound()

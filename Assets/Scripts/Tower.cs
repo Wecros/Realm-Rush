@@ -11,5 +11,6 @@ public class Tower : MonoBehaviour
     void Update()
     {
         objectToPan.LookAt(targetEnemy);
+        
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 114404274765464918}
   - component: {fileID: 114482751021556736}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Block Friendly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537342762866798}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -138,7 +138,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537342762866798}
-  m_Text: 4,0
+  m_Text: 1,0
   m_OffsetZ: 0
   m_CharacterSize: 2
   m_LineSpacing: 1
