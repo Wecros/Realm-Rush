@@ -9,16 +9,12 @@ public class EnemyDamage : MonoBehaviour
     private void OnParticleCollision(GameObject other) {
         ProcessHit();
         if (hitPoints <= 0) {
-            DestroySelf();
+            Destroy(gameObject);
         }
     }
 
     void ProcessHit() {
         hitPoints--;
         print("Current hitpoints: " + hitPoints);
-    }
-
-    void DestroySelf() {
-        Destroy(gameObject);
     }
 }

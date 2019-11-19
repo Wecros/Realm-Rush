@@ -4801,6 +4801,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 1675938735997804817}
   targetEnemy: {fileID: 0}
+  attackRange: 20
+  projectileSystem: {fileID: 458245945}
 --- !u!114 &1678913743995052878
 MonoBehaviour:
   m_ObjectHideFlags: 0

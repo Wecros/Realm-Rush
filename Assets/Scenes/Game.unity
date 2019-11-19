@@ -4936,10 +4936,6 @@ PrefabInstance:
       propertyPath: targetEnemy
       value: 
       objectReference: {fileID: 392919177}
-    - target: {fileID: 458245945, guid: 2d2f4b577fc716d4f9fe0b8252e8e478, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d2f4b577fc716d4f9fe0b8252e8e478, type: 3}
 --- !u!4 &3388037795316110789
